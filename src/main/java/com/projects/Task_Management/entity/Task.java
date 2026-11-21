@@ -15,12 +15,12 @@ public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(nullable = false, updatable = false)
+    @Column(nullable = false)
     private String title;
     private String description;
     @Enumerated(EnumType.STRING)
     private TaskStatus status = TaskStatus.TODO;
-
+    @Column(nullable = false, updatable = false)
     private LocalDateTime createdAt;
 
     public Task(String title, String description, TaskStatus status) {
