@@ -27,7 +27,7 @@ public class Task {
 
         this.title = title;
         this.description = description;
-        this.status = status;
+        this.status = status != null? status: TaskStatus.TODO ;
 
     }
 
